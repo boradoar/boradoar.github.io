@@ -1,14 +1,48 @@
-<html lang="en-US">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="refresh" content="0; url=./produto.html">
-        <script type="text/javascript">
-            window.location.href = "./produto.html"
-        </script>
-        <title>Page Redirection</title>
-    </head>
-    <body>
-        <!-- Note: don't tell people to `click` the link, just tell them that it is a link. -->
-        If you are not redirected automatically, follow this <a href='./produto.html'>link to example</a>.
-    </body>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://kit.fontawesome.com/d33f5ff16b.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="js/incluir-html.js"></script>
+    <title>Bora doar</title>
+</head>
+
+<body>
+    <header incluir-html="./componentes/header.html"></header>
+
+    <section class="secao">
+        <div class="produto">
+            <img src="imagens/foto-produto.jpg">
+        </div>
+
+        <div class="descricao">
+            <h2 class="descricao__titulo">Carrinho de bebê</h2>
+            <p class="descricao__texto">Carrinho de bebê confortável e grande. Produto em bom estado. Estou doando
+                porque a minha filha não cabe mais nele. Entrego o produto em mãos.</p>
+        </div>
+
+        <button class="botao" onclick="mostrarDialogo('idDialogo')">Tenho interesse</button>
+    </section>
+
+    <footer class="rodape" incluir-html="./componentes/rodape.html"></footer>
+
+    <div incluir-html="./componentes/dialogo.html"></div>
+</body>
+
+<script>
+    reservar = function () {
+        alert("Produto reservado com sucesso!");
+        fecharDialogo();
+    }; incluirHTML()
+</script>
+
+<script src="js/dialogo.js"></script>
+
+
+
 </html>
